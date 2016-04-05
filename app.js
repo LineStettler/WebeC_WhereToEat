@@ -2,27 +2,49 @@
  * Created by Line on 05/04/16.
  */
 
-$(document).ready(function() {
 
-    $('#Where').hide();
-    $('#Who').hide();
+function showSection(id){
 
-    $('#Where-link').onclick(function(){
-        $("#What").hide();
-        $("#Where").show();
-        $("#Who").hide();
-    }
-    $('#What-link').onclick(function(){
-            $("#What").show();
-            $("#Where").hide();
-            $("#Who").hide();
-        }
-    );
-    $('#Who-link').onclick(function(){
-            $("#What").hide();
-            $("#Where").hide();
-            $("#Who").show();
-        }
-    );
-
+    $("#What").hide();
+    $("#Where").hide();
+    $("#Who").hide();
+    id.show();
 }
+
+$(document).ready(function() {
+    /*var what = $("#What");
+    var where = $("#Where");
+    var who = $("#Who");
+    showSection(what);
+
+    $('#What-link').click( showSection($('#What')));
+    $('#Who-link').click( showSection($('who')));
+    $('#Where-link').click( showSection('where'));*/
+
+    $("#What").hide();
+    $("#Where").hide();
+    $("#Who").hide();
+    $("#What").show();
+
+    $('#What-link').click( function() {
+        $("#What").hide();
+        $("#Where").hide();
+        $("#Who").hide();
+        $("#What").show();
+    });
+
+
+    $('#Where-link').click(function() {
+        $("#What").hide();
+        $("#Where").hide();
+        $("#Who").hide();
+        $("#Where").show();
+    });
+
+    $('#Who-link').click(function() {
+        $("#What").hide();
+        $("#Where").hide();
+        //$("#Who").hide();
+        $("#Who").show();
+    });
+});

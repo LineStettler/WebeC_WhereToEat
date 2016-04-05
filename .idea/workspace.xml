@@ -26,8 +26,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.049833886">
-              <caret line="2" column="72" selection-start-line="2" selection-start-column="72" selection-end-line="2" selection-end-column="72" />
+            <state vertical-scroll-proportion="0.5232558">
+              <caret line="21" column="7" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -74,8 +74,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="228" />
-    <option name="y" value="366" />
+    <option name="x" value="208" />
+    <option name="y" value="92" />
     <option name="width" value="1004" />
     <option name="height" value="749" />
   </component>
@@ -561,15 +561,15 @@
       <created>1459865235335</created>
       <option name="number" value="Default" />
       <updated>1459865235335</updated>
-      <workItem from="1459865236477" duration="1444000" />
+      <workItem from="1459865236477" duration="1646000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1444000" />
+    <option name="totallyTimeSpent" value="1646000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="228" y="366" width="1004" height="749" extended-state="0" />
+    <frame x="208" y="92" width="1004" height="749" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -614,8 +614,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.049833886">
-          <caret line="2" column="72" selection-start-line="2" selection-start-column="72" selection-end-line="2" selection-end-column="72" />
+        <state vertical-scroll-proportion="0.5232558">
+          <caret line="21" column="7" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="7" />
           <folding />
         </state>
       </provider>

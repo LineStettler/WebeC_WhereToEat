@@ -3,7 +3,7 @@
  */
 
 $(document).ready(function() {
-    event.preventDefault();
+
     $('#Where').hide();
     $('#Who').hide();
 

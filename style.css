@@ -6,6 +6,8 @@ html{
 body{
     margin: 0 0 80px; /* bottom = footer height */
     font-size: 25px;
+    font-family: "Arial";
+    padding: 25px;
 }
 
 nav a {
@@ -13,6 +15,7 @@ nav a {
     color: white;
     padding: 20px;
     font-size: 20px;
+
 }
 
 nav a:hover {

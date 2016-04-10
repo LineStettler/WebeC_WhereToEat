@@ -7,15 +7,15 @@ body{
     margin: 0 0 80px; /* bottom = footer height */
     font-size: 25px;
     font-family: "Arial";
-    padding: 25px;
+    background-image: url("https://static1.squarespace.com/static/546ab118e4b020f024f62077/54f4d9c8e4b0a2a4bf5bcbe5/54f4da16e4b0a2a4bf5cf971/1407214971767/Windows-Live-Writer-1b0e0eb74633_11F8C-");
 }
 
 nav a {
     text-decoration: none;
+    font-family: Impact, Charcoal, sans-serif;
     color: white;
     padding: 20px;
     font-size: 20px;
-
 }
 
 nav a:hover {
@@ -33,6 +33,44 @@ footer {
     left: 0;
     bottom: 0;
     height: 80px;
+    width: 100%;
+}
+
+.radioinput {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 5px;
+    color: #E0E0E0;
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+.radioinput:nth-child(even) {
+    background: rgba(96,96,96,0.75);
+}
+
+.radioinput:nth-child(odd) {
+    background: rgba(72,72,72,0.75);
+}
+.radioinput:hover{
+    background: rgba(18,31,31,0.75);
+}
+
+#go {
+    font-size: 110%;
+    border: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-color: #2F4F4F;
+    font-family: Impact, Charcoal, sans-serif;
+    width: 170px;
+}
+
+#button {
+    position: absolute;
+    bottom: 120px;
     width: 100%;
 }
 

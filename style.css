@@ -6,13 +6,13 @@ html{
 body{
     margin: 0 0 80px; /* bottom = footer height */
     font-size: 25px;
-    font-family: "Arial";
     background-image: url("https://static1.squarespace.com/static/546ab118e4b020f024f62077/54f4d9c8e4b0a2a4bf5bcbe5/54f4da16e4b0a2a4bf5cf971/1407214971767/Windows-Live-Writer-1b0e0eb74633_11F8C-");
+    font-family: Impact, Charcoal, sans-serif;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-nav a {
+nav a{
     text-decoration: none;
-    font-family: Impact, Charcoal, sans-serif;
     color: white;
     padding: 20px;
     font-size: 20px;
@@ -20,6 +20,18 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+}
+
+ol {
+    background: rgba(96,96,96,0.75);
+    padding-top: 2px;
+    padding-bottom: 15px;
+}
+
+ol li {
+    text-decoration: underline;
+    color: #E0E0E0;
+    margin-top: 15px;
 }
 
 nav {
@@ -32,7 +44,7 @@ footer {
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 80px;
+    height: 90px;
     width: 100%;
 }
 
@@ -43,7 +55,7 @@ footer {
     width: 100%;
     padding: 5px;
     color: #E0E0E0;
-    font-family: Impact, Charcoal, sans-serif;
+
 }
 
 .radioinput:nth-child(even) {
@@ -53,11 +65,11 @@ footer {
 .radioinput:nth-child(odd) {
     background: rgba(72,72,72,0.75);
 }
-.radioinput:hover{
+.radioinput:hover {
     background: rgba(18,31,31,0.75);
 }
 
-#go {
+#go{
     font-size: 110%;
     border: none;
     display: block;
@@ -68,9 +80,12 @@ footer {
     width: 170px;
 }
 
-#button {
+#button{
     position: absolute;
     bottom: 120px;
     width: 100%;
 }
+
+
+
 

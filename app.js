@@ -6,7 +6,7 @@ var WHERE = "#Where";
 var WHO = "#Who";
 
 function showSection(id){
-
+    console.log('test');
     $('section').hide();
     $(id).show();
 }
@@ -39,18 +39,25 @@ function success(position) {
     });
 }
 
-if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(success);
-} else {
-    error('Geo Location is not supported');
-}
+
 
 $(document).ready(function() {
-
     showSection(WHAT);
 
-    $('#What-link').click( showSection(WHAT));
-    $('#Who-link').click( showSection(WHO));
-    $('#Where-link').click( showSection(WHERE));
+    $('#What-link').click( function(){
+        showSection(WHAT);
+    });
+
+    $('#Who-link').click( function() {
+        showSection(WHO);
+    });
+    $('#Where-link').click( function(){
+        showSection(WHERE);
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(success);
+        } else {
+            error('Geo Location is not supported');
+        }
+    });
 
 });

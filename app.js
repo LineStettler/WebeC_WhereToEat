@@ -9,6 +9,7 @@ var GO = "#go";
 var map;
 var infowindow;
 var restaurants_nearby;
+var first = true;
 
 function showSection(id){
     $('section').hide();
@@ -54,7 +55,6 @@ function success(position) {
 
     service.nearbySearch(request, function(results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
-            console.log(results);
             restaurants_nearby = results;
             // Create a marker for each restaurant found.
             for (var i = 0; i < results.length; i++) {
@@ -91,6 +91,15 @@ $(document).ready(function() {
 
     $('#Who-link').click( function() {
         showSection(WHO);
+        if (typeof restaurants_nearby !== 'undefined' && restaurants_nearby.length > 0 && first){
+            restaurants_nearby.forEach( function(entry){
+                console.log(entry['name']);
+                $( "ol" ).append( '<li>'+entry['name']+'</li>' );
+            });
+            first = false;
+        } else {
+            console.log('failure');
+        }
     });
     $('#Where-link').click( function(){
         showSection(WHERE);

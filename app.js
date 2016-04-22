@@ -8,9 +8,11 @@ var GO = "#go";
 
 var map;
 var infowindow;
+var restaurants_nearby;
+var counter = 1;
+
 
 function showSection(id){
-    console.log('test');
     $('section').hide();
     $(id).show();
 }
@@ -55,6 +57,7 @@ function success(position) {
     service.nearbySearch(request, function(results, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
             console.log(results);
+            restaurants_nearby = results;
             // Create a marker for each restaurant found.
             for (var i = 0; i < results.length; i++) {
                 createMarker(results[i]);
@@ -64,9 +67,10 @@ function success(position) {
 }
 
 function createMarker(place) {
-    // Create a blue marker for the restaurants
-    var iconFile = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png';
 
+    // Create a blue marker for the restaurants
+    var iconFile = 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld='+counter+'|31c398|000000';
+    counter++;
     var placeLoc = place.geometry.location;
     var marker = new google.maps.Marker({
         map: map,

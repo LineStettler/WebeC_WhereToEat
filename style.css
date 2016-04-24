@@ -97,8 +97,12 @@ footer {
 
 #button{
     position: absolute;
+    background-color: aliceblue;
+    padding: 20px 20px 20px 20px;
     bottom: 120px;
-    width: 100%;
+    width: 10%;
+    margin-left: 45%;
+    text-align: center;
 }
 
 

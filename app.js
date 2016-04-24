@@ -10,6 +10,8 @@ var map;
 var infowindow;
 var restaurants_nearby;
 var first = true;
+var request;
+var radios;
 
 function showSection(id){
     $('section').hide();
@@ -42,11 +44,21 @@ function success(position) {
         title:"You are here!"
     });
 
-    var request = {
+    //get selected radio button
+    //radios = $('input[name="food"]:checked').value;
+    radios = $("input[type='radio'][name='food']:checked");
+
+
+        request = {
         location: here,
         radius: 600,
-        types: ['restaurant']
+        types: ['restaurant'],
+            keyword: ['pizza']
     };
+    //überschreibt auf jeden fall den gesetzten wert ('pizza') für requesr.keyword.
+    // aber ersetzt ihn leider mit nichts -> radios funktioniert noch nicht richtig;
+    request.keyword = radios.value;
+
 
     infowindow = new google.maps.InfoWindow();
 
@@ -62,6 +74,50 @@ function success(position) {
             }
         }
     });
+}
+
+
+
+function changeHandler(event) {
+    request.keyword = [this.value];
+    /*
+    if ( this.value === 'vegi' ) {
+        console.log('value', 'vegi');
+            request = {
+            location: here,
+            radius: 1800,
+            types: ['restaurant'],
+            keyword: ['vegi']
+        };
+    }
+    if ( this.value === 'pizza'){
+        console.log('value', 'pizza');
+        request = {
+            location: here,
+            radius: 1800,
+            types: ['restaurant'],
+            keyword: ['pizza']
+        };
+    }
+    if ( this.value === 'burger'){
+        console.log('value', 'burger');
+        request = {
+            location: here,
+            radius: 1800,
+            types: ['restaurant'],
+            keyword: ['burger']
+        };
+    }
+    if ( this.value === 'sushi'){
+        console.log('value', 'sushi');
+        request = {
+            location: here,
+            radius: 1800,
+            types: ['restaurant'],
+            keyword: ['sushi']
+        };
+    }
+    */
 }
 
 function createMarker(place, number) {
@@ -85,9 +141,20 @@ function createMarker(place, number) {
 $(document).ready(function() {
     showSection(WHAT);
 
+
+    $('#Button-link').click( function(){
+        showSection(WHERE);
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(success);
+        } else {
+            error('Geo Location is not supported');
+        }
+    });
+
     $('#What-link').click( function(){
         showSection(WHAT);
     });
+
 
     $('#Who-link').click( function() {
         showSection(WHO);
@@ -103,11 +170,11 @@ $(document).ready(function() {
     });
     $('#Where-link').click( function(){
         showSection(WHERE);
-        if (navigator.geolocation) {
+       /* if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(success);
         } else {
             error('Geo Location is not supported');
-        }
+        }*/
     });
 
 });

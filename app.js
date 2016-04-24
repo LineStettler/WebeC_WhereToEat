@@ -57,7 +57,7 @@ function success(position) {
     };
     //überschreibt auf jeden fall den gesetzten wert ('pizza') für requesr.keyword.
     // aber ersetzt ihn leider mit nichts -> radios funktioniert noch nicht richtig;
-    request.keyword = radios.value;
+    request.keyword = radios.val();
 
 
     infowindow = new google.maps.InfoWindow();
@@ -80,44 +80,7 @@ function success(position) {
 
 function changeHandler(event) {
     request.keyword = [this.value];
-    /*
-    if ( this.value === 'vegi' ) {
-        console.log('value', 'vegi');
-            request = {
-            location: here,
-            radius: 1800,
-            types: ['restaurant'],
-            keyword: ['vegi']
-        };
-    }
-    if ( this.value === 'pizza'){
-        console.log('value', 'pizza');
-        request = {
-            location: here,
-            radius: 1800,
-            types: ['restaurant'],
-            keyword: ['pizza']
-        };
-    }
-    if ( this.value === 'burger'){
-        console.log('value', 'burger');
-        request = {
-            location: here,
-            radius: 1800,
-            types: ['restaurant'],
-            keyword: ['burger']
-        };
-    }
-    if ( this.value === 'sushi'){
-        console.log('value', 'sushi');
-        request = {
-            location: here,
-            radius: 1800,
-            types: ['restaurant'],
-            keyword: ['sushi']
-        };
-    }
-    */
+
 }
 
 function createMarker(place, number) {
